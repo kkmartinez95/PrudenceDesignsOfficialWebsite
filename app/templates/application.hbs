@@ -1,6 +1,66 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
-{{!-- THIS IS NEW --}}
+<div class="container">
+    <div class="nav">
 
-{{outlet}}
+        <div class="logo-section">
+            {{#link-to 'index'}}
+            <img class='doxie' src="/assets/images/doxie.png">
+            {{/link-to}}
+        </div>
+
+
+        {{!-- <div> --}}
+        <div class="links">
+
+            {{#link-to 'shop' class="link"}}
+            Shop
+            {{/link-to}}
+
+            {{#link-to 'our-story' class="link"}}
+            About
+            {{/link-to}}
+
+            {{#link-to 'contact' class="link"}}
+            Contact
+            {{/link-to}}
+        </div>
+
+
+        <div class="phone">
+            <p>
+                <FaIcon class='icon' @icon="phone-alt" @prefix="fa" @size="1x" />
+
+                (212) 691-1356
+            </p>
+        </div>
+        {{!-- </div> --}}
+
+
+        <FaIcon class='hamburger' @icon="bars" @prefix="fa" @size="1x" />
+
+
+    </div>
+
+
+    <div class="body">
+        {{outlet}}
+    </div>
+
+
+    <div class="footer">
+        <div class="all-footer-icons">
+            <a href="https://www.instagram.com/prudence_designs/?hl=en">
+                <FaIcon class='foot-icon' @icon="instagram" @prefix="fab" @size="3x" />
+            </a>
+
+            <a href="https://www.facebook.com/Prudence-Designs-Events-153179578055252/">
+                <FaIcon class='foot-icon' @icon="facebook" @prefix="fab" @size="3x" />
+            </a>
+
+            <a>
+                <FaIcon class='foot-icon' @icon="envelope" @prefix="fa" @size="3x" />
+            </a>
+        </div>
+
+        <p class="copyright">Copyright © Prudence Designs, LLC. All rights reserved.</p>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="shop-container">
+
+    <div class="welcome-flower">
+        <div class="welcome-content">
+            <p>
+                We are taking orders for delivery
+            </p>
+            {{#link-to 'contact' class="link"}}
+            <button>Order Now</button>
+            {{/link-to}}
+        </div>
+
+    </div>
+    {{!-- BELOW IS HOW TO MAP OVER AN ARRAY OF STUFF, REFER BACK TO THE EMBER DOCS FOR MORE INFO --}}
+    {{!-- {{#each model as |shop|}}
+    <article class="listing">
+        <h3>{{shop.title}}</h3>
+        <div class="detail owner">
+            <span>Owner:</span> {{shop.owner}}
+        </div>
+        <div class="detail type">
+            <span>Type:</span> {{shop.propertyType}}
+        </div>
+        <div class="detail location">
+            <span>Location:</span> {{shop.city}}
+        </div>
+        <div class="detail bedrooms">
+            <span>Number of bedrooms:</span> {{shop.bedrooms}}
+        </div>
+    </article>
+    {{/each}} --}}
+
+</div>
